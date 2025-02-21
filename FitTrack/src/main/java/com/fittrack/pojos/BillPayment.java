@@ -12,7 +12,6 @@ import lombok.Setter;
 import lombok.ToString;
 
 @Getter
-//@Setter
 @Entity
 @NoArgsConstructor
 @ToString(callSuper = true)
@@ -36,9 +35,9 @@ public class BillPayment extends BaseEntity {
 		this.amount = amount;
 		this.paymentDate = paymentDate;
 	}
-	
-	//member to billpayment
-	//1 to 1
+	@OneToOne
+    @JoinColumn(name = "member_id", nullable = false, unique = true)
+    private Member member;
 	
 	
 	

@@ -19,8 +19,6 @@ import lombok.ToString;
 @Table(name = "GymPackages")
 public class GymPackage  extends BaseEntity{
 
-	
-	
 	private double price;
 	@Column(length = 200)
 	private String description;
@@ -33,8 +31,10 @@ public class GymPackage  extends BaseEntity{
     @JoinColumn(name = "trainer_id", nullable = false)  // Foreign key column
     private FitnessTrainer trainer;
 
-    public Package(String packageName, PackageType packageType, String packageDuration, FitnessTrainer trainer) {
+    public Package(double price,String description,String packageName, PackageType packageType, String packageDuration, FitnessTrainer trainer) {
         super();
+	this.price = price;
+	this.description = description;
         this.packageName = packageName;
         this.packageType = packageType;
         this.packageDuration = packageDuration;

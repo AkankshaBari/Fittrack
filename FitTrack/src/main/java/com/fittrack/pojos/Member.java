@@ -37,7 +37,7 @@ public class Member extends BaseEntity {
 	private User user;
 
 	@OneToMany
-	@JoinColumn(name = "feedback_id")
+	@JoinColumn(mappedBy = "member", cascade = CascadeType.ALL, orphanRemoval = true)
 	private List<MemberFeedback> feedbacks;
 	
 	@OneToOne(fetch = FetchType.LAZY)

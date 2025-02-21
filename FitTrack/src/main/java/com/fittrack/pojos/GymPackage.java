@@ -50,7 +50,7 @@ public class GymPackage  extends BaseEntity{
 //		this.packageType = packageType;
 //	}
 	
-	//trainers package relation ship
+	//trainers package relati
 	//pkg--trainer
 	//many to one
 	

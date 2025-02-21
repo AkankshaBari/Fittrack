@@ -25,6 +25,10 @@ public class MemberFeedback  extends BaseEntity{
 	private String email;
 	@Column(name =  "member_name",length = 30)
 	private String memberName;
+
+	@ManyToOne
+        @JoinColumn(name = "member_id", nullable = false)
+        private Member member;
 	
 	public MemberFeedback(String description, double ratings, String email, String memberName) {
 		super();
@@ -33,6 +37,8 @@ public class MemberFeedback  extends BaseEntity{
 		this.email = email;
 		this.memberName = memberName;
 	}
+
+	
 	
 	
 	

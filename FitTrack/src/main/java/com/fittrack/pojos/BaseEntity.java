@@ -22,12 +22,15 @@ import lombok.ToString;
 public class BaseEntity {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@NotBlank
 	private Long id;
 	@CreationTimestamp
 	@Column(name="created_on")
+	@NotBlank
 	private LocalDate createdOn;
 	@UpdateTimestamp
 	@Column(name="updated_on")
+	@NotBlank
 	private LocalDateTime updatedOn;
 
 }

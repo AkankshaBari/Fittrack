@@ -27,9 +27,9 @@ public class GymPackage  extends BaseEntity{
 	private PackageType packageType;
 	@Column(name = "package_duration")
 	private int packageDuration;
- @ManyToOne
-    @JoinColumn(name = "trainer_id", nullable = false)  // Foreign key column
-    private FitnessTrainer trainer;
+ // @ManyToOne
+ //    @JoinColumn(name = "trainer_id", nullable = false)  
+ //    private FitnessTrainer trainer;
 
     public Package(double price,String description,String packageName, PackageType packageType, String packageDuration, FitnessTrainer trainer) {
         super();
